@@ -1,0 +1,238 @@
+:root {
+    --apple-azul: #0071e3;
+    --apple-cinza: #f5f5f7;
+    --apple-cinza-escuro: #86868b;
+    --apple-texto: #1d1d1f;
+    --apple-verde: #008000;
+    --apple-vermelho: #ff3b30;
+    --apple-azul-destaque: #0077ED;
+    --desativado-vermelho: #ff3b30;
+    --especial-azul: #0071e3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: var(--apple-texto);
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos do Cabeçalho */
+.cabecalho-principal {
+    background-color: var(--apple-cinza);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.conteudo-cabecalho {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--apple-texto);
+}
+
+.subtitulo {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--apple-cinza-escuro);
+}
+
+/* Seção de Legenda */
+.secao-legenda {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item-legenda {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.cor-legenda {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.cor-legenda.vermelho {
+    background-color: var(--desativado-vermelho);
+}
+
+.cor-legenda.azul {
+    background-color: var(--especial-azul);
+}
+
+.cor-legenda.cinza {
+    background-color: #86868b;
+}
+
+/* Seção de Controles */
+.secao-controles {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin: 40px 0;
+    justify-content: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.botao {
+    background-color: var(--apple-azul);
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 980px;
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+    background-color: var(--apple-azul-destaque);
+    transform: scale(1.02);
+}
+
+.botao-processar {
+    background-color: var(--apple-verde);
+}
+
+.botao-calcular {
+    background-color: var(--apple-verde);
+    font-size: 18px;
+    padding: 16px 32px;
+}
+
+.arquivo-selecionado {
+    font-weight: 500;
+    color: var(--apple-texto);
+    margin-top: 10px;
+}
+
+/* Estilos da Tabela */
+.secao-tabela {
+    margin: 40px 0;
+}
+
+.container-tabela {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 16px 24px;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+th {
+    background-color: var(--apple-cinza);
+    font-weight: 600;
+    color: var(--apple-texto);
+}
+
+tr:hover {
+    background-color: rgba(0, 113, 227, 0.05);
+}
+
+.disabled-row {
+    color: var(--desativado-vermelho);
+    pointer-events: none;
+}
+
+.special-row {
+    color: var(--especial-azul);
+    pointer-events: none;
+}
+
+/* Seção de Total */
+.secao-total {
+    margin: 40px 0;
+    text-align: center;
+}
+
+#totalSelecionado {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--apple-texto);
+}
+
+#calculateButtonContainer {
+    margin-top: 20px;
+}
+
+/* Rodapé */
+.rodape-principal {
+    background-color: var(--apple-cinza);
+    padding: 20px;
+    text-align: center;
+    color: var(--apple-cinza-escuro);
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    
+    .subtitulo {
+        font-size: 20px;
+    }
+    
+    .secao-controles {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .botao {
+        width: 100%;
+    }
+    
+    th, td {
+        padding: 12px 16px;
+    }
+}

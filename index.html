@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garimpo do Açúcar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho-principal">
+        <div class="conteudo-cabecalho">
+            <h1>Garimpo do açúcar</h1>
+            <p class="subtitulo">O imposto do açúcar calculado em poucos cliques.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="secao-legenda">
+            <div class="item-legenda">
+                <span class="cor-legenda vermelho"></span>
+                <p>Açúcar de fora do Estado de SE</p>
+            </div>
+            <div class="item-legenda">
+                <span class="cor-legenda azul"></span>
+                <p>Açúcar de transferência</p>
+            </div>
+            <div class="item-legenda">
+                <span class="cor-legenda cinza"></span>
+                <p>Açúcar que pode entrar no cálculo</p>
+            </div>
+        </section>
+
+        <section class="secao-controles">
+            <label for="fileInput" class="botao">Escolher Arquivo</label>
+            <input type="file" id="fileInput" accept=".txt" onchange="showSelectedFile()">
+            <div id="selectedFile" class="arquivo-selecionado"></div>
+            <button class="botao botao-processar" onclick="processFile()">Processar</button>
+        </section>
+
+        <section class="secao-tabela">
+            <div class="container-tabela">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Número da Nota</th>
+                            <th>Selecionar</th>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Imposto (1,9%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Linhas serão adicionadas aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="secao-total">
+            <h3 id="totalSelecionado">Total Selecionado: </h3>
+            <div id="calculateButtonContainer">
+                <button class="botao botao-calcular" onclick="calculateSelected()"></button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-principal">
+        <p>©2024 Garimpo do Açúcar. Desenvolvido por Arlan Arnor - descontinuado em jan de 2025 devido a extinção do imposto do ICMS do açúcar em Sergipe</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
